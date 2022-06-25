@@ -1,0 +1,45 @@
+{
+  "name": "downloader-api",
+  "version": "1.0.0",
+  "description": "A simple youtube downloader",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node --transpile-only server.ts",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adryanalencar/downloader-api.git"
+  },
+  "keywords": [
+    "youtube",
+    "mp4",
+    "mp3",
+    "downloader"
+  ],
+  "author": "Adryan Alencar <adryan.alencar@sevenfox.com.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adryanalencar/downloader-api/issues"
+  },
+  "homepage": "https://github.com/adryanalencar/downloader-api#readme",
+  "dependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^18.0.0",
+    "@types/node-fetch": "2.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "firebase-admin": "^11.0.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "ts-node": "^10.8.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4",
+    "winston": "^3.8.0",
+    "youtube-dl-exec": "^2.0.12"
+  }
+}
