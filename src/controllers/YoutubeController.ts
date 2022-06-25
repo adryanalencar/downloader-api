@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import url from 'url'
 import { YoutubeService } from "../services/youtube";
 
 async function getVideoDetails(request: Request, response: Response){
@@ -12,11 +13,11 @@ async function getVideoDetails(request: Request, response: Response){
 }
 
 async function getDownloadOptions(request: Request, response: Response){
-    const url = request.params.url;
-    const video = await YoutubeService.getDownloadOptions(url);
+    const videoUrl = url.parse(request.url, true);
+    const video = await YoutubeService.getDownloadOptions(videoUrl.query.url as string);
 
     response.json({
-        url,
+        url: videoUrl.query.url,
         video
     })
 }
